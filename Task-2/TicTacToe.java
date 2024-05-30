@@ -127,8 +127,10 @@ public class TicTacToe {
         if(board[0][2].getText() == board[1][1].getText() && 
         board[1][1].getText() == board[2][0].getText() &&
         board[0][2].getText() != "" ) {
+            int j = 2 ;
             for(int i = 0 ; i < 3 ; i ++) {
-                setWinner(board[i][i]) ;
+                setWinner(board[i][j]) ;
+                j -= 1;
             }
 
             gameOver = true ; 
